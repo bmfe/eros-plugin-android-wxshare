@@ -23,8 +23,9 @@ public class UmengModule extends WXModule {
         EventUmeng umeng = new EventUmeng();
         umeng.initUM(mWXSDKInstance.getContext(), umengAppKey);
     }
+
     @JSMethod
-    public void initWX(String params){
+    public void initWX(String params) {
         EventUmeng umeng = new EventUmeng();
         umeng.initPlatform(mWXSDKInstance.getContext(), params);
     }
@@ -78,12 +79,24 @@ public class UmengModule extends WXModule {
     }
 
     @JSMethod
-    public void login(String parameterString, JSCallback callback) {
+    public void authLogin(JSCallback callback) {
         WeexEventBean weexEventBean = new WeexEventBean();
         weexEventBean.setKey(WXEventCenter.EVENT_WECHATLOGIN);
         weexEventBean.setContext(mWXSDKInstance.getContext());
         weexEventBean.setJscallback(callback);
-        weexEventBean.setJsParams(parameterString);
         ManagerFactory.getManagerService(DispatchEventManager.class).getBus().post(weexEventBean);
+    }
+
+    /**
+     * 获取是否安装WeChat
+     */
+    @JSMethod
+    public void isInstallWXApp(JSCallback callback) {
+        WeexEventBean weexEventBean = new WeexEventBean();
+        weexEventBean.setKey(WXEventCenter.EVENT_ISINSTALLWXAPP);
+        weexEventBean.setContext(mWXSDKInstance.getContext());
+        weexEventBean.setJscallback(callback);
+        ManagerFactory.getManagerService(DispatchEventManager.class).getBus().post(weexEventBean);
+
     }
 }
