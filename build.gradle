@@ -21,6 +21,10 @@ android {
         }
     }
 
+    lintOptions {
+        abortOnError false
+    }
+
 }
 
 dependencies {
@@ -28,7 +32,7 @@ dependencies {
     compile 'com.android.support:appcompat-v7:25.3.1'
     testCompile 'junit:junit:4.12'
 
-    compile project(':nexus')
+    compile 'com.benmu.eros:eros-nexus:0.0.1'
 
     //友盟数据分析
     compile 'com.umeng.sdk:common:latest.integration'
@@ -38,4 +42,15 @@ dependencies {
     compile files('libs/umeng_social_tool.jar')
 
 
+}
+
+apply plugin: 'com.novoda.bintray-release'
+publish {
+    userOrg = 'erosandroid'
+    repoName='ErosApi'
+    groupId = 'com.benmu.eros'
+    artifactId = 'plugin-wxshare'
+    publishVersion = '1.0.0'
+    desc = 'Wechat share plugin for Eros'
+    website = 'https://github.com/bmfe/eros-plugin-android-wxshare'
 }
