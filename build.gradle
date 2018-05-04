@@ -24,15 +24,14 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:25.3.1'
     testCompile 'junit:junit:4.12'
 
     compile project(':nexus')
 
     //友盟数据分析
-    compile 'com.umeng.sdk:common:latest.integration'
-    compile 'com.umeng.sdk:analytics:latest.integration'
+    compile 'com.umeng.sdk:common:1.5.0'
+    compile 'com.umeng.sdk:analytics:7.5.0'
     compile files('libs/umeng_social_net.jar')
     compile files('libs/umeng_social_api.jar')
     compile files('libs/umeng_social_tool.jar')
