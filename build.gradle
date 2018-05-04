@@ -42,14 +42,3 @@ dependencies {
 
 
 }
-
-apply plugin: 'com.novoda.bintray-release'
-publish {
-    userOrg = 'erosandroid'
-    repoName='ErosApi'
-    groupId = 'com.benmu.eros'
-    artifactId = 'plugin-wxshare'
-    publishVersion = '1.0.0'
-    desc = 'Wechat share plugin for Eros'
-    website = 'https://github.com/bmfe/eros-plugin-android-wxshare'
-}
