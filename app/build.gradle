@@ -9,6 +9,7 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        javaCompileOptions.annotationProcessorOptions.includeCompileClasspath = true
     }
     buildTypes {
         release {
@@ -25,4 +26,7 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     implementation 'com.android.support:appcompat-v7:25.3.1'
     implementation project(':library-wxshare')
+
+    implementation 'com.github.bmfe:eros-nexus:0.0.3'
+    implementation 'com.github.bmfe:WeexErosFramework:0.0.4'
 }
