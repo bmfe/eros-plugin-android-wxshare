@@ -34,6 +34,6 @@ dependencies {
     compile files('libs/umeng_social_api.jar')
     compile files('libs/umeng_social_tool.jar')
 
-//    compile project(':nexus')
-    implementation 'com.github.bmfe.eros-nexus:nexus:1.0.0'
+    compile project(':nexus')
+//    implementation 'com.github.bmfe.eros-nexus:nexus:1.0.0'
 }
