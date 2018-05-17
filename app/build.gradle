@@ -27,6 +27,6 @@ dependencies {
     implementation 'com.android.support:appcompat-v7:25.3.1'
     implementation project(':library-wxshare')
 
-    implementation 'com.github.bmfe:eros-nexus:0.0.3'
-    implementation 'com.github.bmfe:WeexErosFramework:0.0.4'
+//    implementation 'com.github.bmfe:eros-nexus:0.0.3'
+//    implementation 'com.github.bmfe:WeexErosFramework:0.0.4'
 }
