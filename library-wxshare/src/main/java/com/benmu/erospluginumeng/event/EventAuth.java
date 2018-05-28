@@ -34,10 +34,7 @@ public class EventAuth extends EventGate {
 
     @Override
     public void perform(Context context, WeexEventBean weexEventBean) {
-        String param = weexEventBean.getJsParams();
-        if (SharePlatformCatalog.P_WECHATSESSION.equals(param)) {
-            wechat(context, weexEventBean.getJscallback());
-        }
+        wechat(context, weexEventBean.getJscallback());
     }
 
     public void wechat(Context context, JSCallback jscallback) {
