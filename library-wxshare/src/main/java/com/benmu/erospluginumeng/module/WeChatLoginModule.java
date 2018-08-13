@@ -8,8 +8,6 @@ import com.benmu.framework.model.WeexEventBean;
 import com.taobao.weex.annotation.JSMethod;
 import com.taobao.weex.bridge.JSCallback;
 import com.taobao.weex.common.WXModule;
-import com.umeng.analytics.MobclickAgent;
-import com.umeng.commonsdk.UMConfigure;
 
 /**
  * WeChat 登录 交互Module

@@ -5,6 +5,7 @@ import android.content.Context;
 import android.text.TextUtils;
 
 import com.benmu.erospluginumeng.model.UmengPlagformBean;
+import com.benmu.erospluginumeng.model.WXApiModule;
 import com.benmu.framework.manager.ManagerFactory;
 import com.benmu.framework.manager.impl.ParseManager;
 import com.benmu.framework.utils.DebugableUtil;
@@ -22,7 +23,7 @@ public class EventUmeng {
 
     public void initUM(Context context, String androidAppKey) {
         if (!TextUtils.isEmpty(androidAppKey)) {
-            Config.DEBUG = true;
+//            Config.DEBUG = true;
             UMConfigure.init(context, androidAppKey, "umeng", UMConfigure.DEVICE_TYPE_PHONE, "");
             MobclickAgent.setDebugMode(DebugableUtil.isDebug());
             MobclickAgent.openActivityDurationTrack(false);
@@ -36,6 +37,7 @@ public class EventUmeng {
         UmengPlagformBean bean = ManagerFactory.getManagerService(ParseManager.class).parseObject
                 (params, UmengPlagformBean.class);
         PlatformConfig.setWeixin(bean.getAppKey(), bean.getAppSecret());
+        WXApiModule.getInstans().onCreateWXApi(context, bean.getAppKey());
 
     }
 
