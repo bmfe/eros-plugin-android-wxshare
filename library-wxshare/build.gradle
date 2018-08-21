@@ -28,8 +28,8 @@ dependencies {
     implementation 'com.android.support:appcompat-v7:25.3.1'
     testImplementation 'junit:junit:4.12'
     //友盟数据分析
-    compile 'com.umeng.sdk:common:1.5.0'
-    compile 'com.umeng.sdk:analytics:7.5.0'
+    compile 'com.umeng.sdk:common:1.5.3'
+    compile 'com.umeng.sdk:analytics:7.5.3'
 //    compile files('libs/umeng_social_net.jar')
     compile files('libs/umeng-sharetool-6.9.3.jar')
     compile files('libs/umeng-share-wechat-simplify-6.9.3.jar')

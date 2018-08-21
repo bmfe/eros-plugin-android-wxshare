@@ -24,8 +24,9 @@ public class EventUmeng {
     public void initUM(Context context, String androidAppKey) {
         if (!TextUtils.isEmpty(androidAppKey)) {
 //            Config.DEBUG = true;
+//            UMConfigure.setLogEnabled(true);
             UMConfigure.init(context, androidAppKey, "umeng", UMConfigure.DEVICE_TYPE_PHONE, "");
-            MobclickAgent.setDebugMode(DebugableUtil.isDebug());
+//            MobclickAgent.setDebugMode(DebugableUtil.isDebug());
             MobclickAgent.openActivityDurationTrack(false);
             MobclickAgent.setCatchUncaughtExceptions(!DebugableUtil.isDebug());
             MobclickAgent.setScenarioType(context, MobclickAgent.EScenarioType.E_UM_NORMAL);
